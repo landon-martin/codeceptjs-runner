@@ -1,0 +1,22 @@
+name: "Codeceptjs Test Runner"
+description: "Runs CodeceptJS Test Cases"
+author: "Landon Martin"
+branding:
+  icon: "message-square"
+  color: "blue"
+inputs:
+  run-command:
+    description: "The npm command to execute codecept tests"
+    required: true
+  working-dir:
+    description: "Where the command should run"
+    required: false
+    default: '.'
+  report:
+    description: "The location where your report.json will be after running the tests, this will provide better error reporting"
+    required: false
+  config:
+    description: "Location of config file to use"
+runs:
+  using: "node12"
+  main: "src/index.js"
